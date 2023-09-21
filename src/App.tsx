@@ -4,9 +4,9 @@
  *
  * @format
  */
-
+// redux saga example https://rasha08.medium.com/combining-redux-sagas-for-more-scalable-stores-68d8a2629cc
 import React from 'react';
-import type { PropsWithChildren } from 'react';
+import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -21,7 +21,7 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({ children, title }: SectionProps): JSX.Element {
+function Section({children, title}: SectionProps): JSX.Element {
   return (
     <View style={styles.sectionContainer}>
       {title}
@@ -36,13 +36,13 @@ function App(): JSX.Element {
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View >
+        <View>
           <Section title="Step One">
             Edit <Text style={styles.sectionTitle}>App.tsx</Text>
             to change this screen and then come back to see your edits.
           </Section>
-          <Section title="See Your Changes"></Section>
-          <Section title="Debug"></Section>
+          <Section title="See Your Changes" />
+          <Section title="Debug" />
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
-  }
+  },
 });
 
 export default App;

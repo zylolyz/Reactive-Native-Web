@@ -12,14 +12,20 @@
     "test": "jest"
   },
   "dependencies": {
+    "@rneui/base": "^0.0.0-edge.2",
+    "@rneui/themed": "^0.0.0-edge.2",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-native": "0.72.4",
+    "react-native-safe-area-context": "^4.7.2",
+    "react-native-vector-icons": "^10.0.0",
     "react-native-web": "^0.19.9",
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@babel/plugin-syntax-flow": "^7.14.5",
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
     "@react-native/eslint-config": "^0.72.2",

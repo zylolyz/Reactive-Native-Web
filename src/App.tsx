@@ -5,7 +5,7 @@
  * @format
  */
 // redux saga example https://rasha08.medium.com/combining-redux-sagas-for-more-scalable-stores-68d8a2629cc
-import React from 'react';
+import React, {FC} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -16,6 +16,25 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+
+import withObservables from '@nozbe/with-observables';
+import {database} from './database';
+import User from './model/user';
+
+// const enhance = withObservables(['user'], () => ({
+//   users: database.collections.get('users'),
+// }));
+
+const users = database.collections.get('users');
+const observeUsers = () => users.query().observe();
+
+const Chart: FC<{users: User[]}> = ({users}) => {
+  if (users.length < 1) {
+    return <Text>empty</Text>;
+  }
+
+  return <Text>lsw</Text>;
+};
 
 type SectionProps = PropsWithChildren<{
   title: string;
